@@ -15,21 +15,18 @@ const DateText = styled.div`
   padding-left: 10px;
 `;
 
-const DayText = styled.div`
-  font-size: 22px;
-  color: #119955;
-  padding-top: 5px;
-`;
-
 const TodoHead = () => {
   //@TODO 현재 시간을 표시해야합니다.
-  const dayString = "Tuesday";
-  const dateString = "July 20, 2021";
-
+  const date = new Date();
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long"
+  };
   return (
     <TodoHeadBlock>
-      <DayText>{dayString}</DayText>
-      <DateText>{dateString}</DateText>
+      <DateText>{date.toLocaleDateString("en-US", options)}</DateText>
     </TodoHeadBlock>
   );
 };

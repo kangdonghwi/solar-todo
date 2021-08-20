@@ -5,6 +5,7 @@ export type Itodo = {
   id: number;
   text: string;
   done: boolean;
+  date: string;
 };
 
 let initialTodos: Itodo[] = [];
@@ -26,7 +27,10 @@ export const useTodo = () => {
   };
 
   const toggleTodo = (id: number) => {
-    //@TODO
+    const toggleState = todoState.map((todo: Itodo) => {
+      return todo.id === id ? { ...todo, done: !todo.done } : todo;
+    });
+    setTodoState(toggleState);
   };
 
   const removeTodo = (id: number) => {
