@@ -61,7 +61,7 @@ const TodoCreate = ({
             onChange={handleChange}
             value={value}
           />
-          <DatePicker onChange={handleDateChange} />
+          <DatePicker onChange={handleDateChange} placeholder="마감일" />
           <CircleButton onClick={handleToggle} open={open}>
             <PlusCircleOutlined />
           </CircleButton>
