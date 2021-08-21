@@ -40,7 +40,10 @@ export const useTodo = () => {
   };
 
   const createTodo = (todo: Itodo) => {
-    const nextId = todoState[todoState.length - 1].id + 1;
+    const nextId =
+      todoState.length === 0
+        ? todoState.length + 1
+        : todoState[todoState.length - 1].id + 1;
     setTodoState((prevState) =>
       prevState.concat({
         ...todo,
