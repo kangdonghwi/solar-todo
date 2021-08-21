@@ -15,7 +15,10 @@
 ## 실행
 
 > codesandbox에서 실행 가능
+
 > https://codesandbox.io/s/github/kangdonghwi/soloar-todo
+
+---
 
 ## 구현 이미지
 
