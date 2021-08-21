@@ -40,7 +40,6 @@ const TodoCreate = ({
     });
     incrementNextId();
     setValue("");
-    setDate(null);
   };
 
   const handleDateChange = (date: string, dateString: string) => {
